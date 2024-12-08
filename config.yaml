@@ -1,0 +1,26 @@
+transport:
+  host: "nfs.example.com"
+  port: 2049
+  use_ssl: true
+  timeout: 30.0
+  max_retries: 3
+  retry_delay: 1.0
+
+server:
+  mount_point: "/mnt/nfs"
+  export_path: "/exports/data"
+  max_connections: 1000
+  cache_size: 10000
+  grace_period: 90
+
+retry:
+  max_retries: 3
+  base_delay: 1.0
+  max_delay: 30.0
+  exponential_base: 2.0
+
+performance:
+  cache_size: 10000
+  cache_ttl: 300
+  connection_pool_size: 10
+  connection_idle_timeout: 300
